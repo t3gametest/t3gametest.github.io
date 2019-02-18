@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tic Tac Toe Game</title>
+
+        <link rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+
+        
+<div class="snowflakes" aria-hidden="true">
+        <div class="snowflake">
+        ❅
+        </div>
+        <div class="snowflake">
+        ❅
+        </div>
+        <div class="snowflake">
+        ❆
+        </div>
+        <div class="snowflake">
+        ❄
+        </div>
+        <div class="snowflake">
+        ❅
+        </div>
+        <div class="snowflake">
+        ❆
+        </div>
+        <div class="snowflake">
+        ❄
+        </div>
+        <div class="snowflake">
+        ❅
+        </div>
+        <div class="snowflake">
+        ❆
+        </div>
+        <div class="snowflake">
+        ❄
+        </div>
+      </div>
+
+        <div id="tic-tac-toe" class="container-fluid">
+            <div class="row">
+                <div class="col-lg-2">
+
+                    <label>Score:</label>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">X</span>
+                        </div>
+                        <input readonly id="xWonCount" type="text"
+                            class="form-control" value="0" disabled>
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">O</span>
+                        </div>
+                        <input readonly id="oWonCount" type="text"
+                            class="form-control" value="0" disabled>
+                    </div>
+
+                </div>
+                <div class="col-lg-8">
+                    <div class="text-center">
+                        <br>
+                        <h4>TIC TAC TOE</h4>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+
+                    <form>
+                        <div class="form-group">
+                            <label for="boardSize">Board Size :</label>
+                            <div class="input-group mb-3">
+                                <input type="number" step="1" min="3" value="3"
+                                    class="form-control" id="boardSize"
+                                    name="boardSize"
+                                    placeholder="Board Size" required>
+                                <div class="input-group-append">
+                                    <button type="button" id="resetBoard"
+                                        class="btn
+                                        btn-danger btn-block"><i class="fa
+                                            fa-check"> Start</i></button>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-danger
+                                btn-block" data-toggle="modal"
+                                data-target="#rules">Game Info</button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="rules"
+                                tabindex="-1" role="dialog"
+                                aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <p>Game Info</p>
+                                            <button type="button" class="close"
+                                                data-dismiss="modal"
+                                                aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>The object of Tic Tac Toe is to get three in a row. You play on a three by three game board. The first player is known as X and the second is O. Players alternate placing Xs and Os on the game board until either oppent has three in a row or all nine squares are filled. X always goes first, and in the event that no one has three in a row, the stalemate is called a cat game.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col">
+                    <div id="board"></div>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>
